@@ -22,7 +22,7 @@ const Homepage = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get('http://localhost:5000/api/weather', { params: { location } });
+      const response = await axios.get('https://weather-travel-app-2.onrender.com/api/weather', { params: { location } });
       const { location: locData, dailyForecasts } = response.data;
       setLocationName(locData.name);
       setWeatherData(dailyForecasts);
